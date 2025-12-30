@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--Importante para el SEO-->
+        <meta name="description" content="Invitación al bautizo de Santiago Téllez Bazán">
+
+
+        <title>Bautizo de Santiago</title>
+
+        <!--Prefetch carga páginas que creemos que el usuario visitará a continuacón-->
+        <link rel="prefetch" href="cursos.html" as="document">
+        <!--Hay herramientas como google analitics para saber en qué página pasan más tiempo los usuarios-->
+
+        <!--Preload para que cargue la página hasta estar listos-->
+        <link rel="preload" href="css/normalize.css" as="style">
+        <link rel="stylesheet" href="css/normalize.css">
+
+        <link rel="preload" href="css/style.css" as="style">
+        <link rel="stylesheet" href="css/style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Luxurious+Script&display=swap" rel="stylesheet">
+
+
+    </head>
+    <body>
+        <div class="espacio"></div>
+        <header class="header .no-margin header__texto berkshire-swash-drama">
+            <h1 class="no-margin luxurious-script-regular">Mi bautizo</h1>
+                <p class="berkshire-swash-regular">El que cree y fuere bautizado, será salvo… <br><span class="no-margin">- Marcos 16:16</span></p>
+                
+
+            <div id="divPlay">
+                <button id="playBtn" aria-label="Reproducir canción"></button>
+                <audio id="audioPlayer" src="cancion.mp3"></audio>
+                <p class="berkshire-swash-drama no-margin">¡Reprodúceme!</p>
+            </div>
+            <script src="js/musica.js"></script>
+
+            
+            
+        </header>
+
+        <div class="contenedor contenido-principal">
+            
+            <main class="blog">
+
+                <div class="contenedor_nombramiento">
+                    <h2 class="luxurious-script-regular no-margin nombramiento__nombre">Santiago Téllez Bazán</h2>
+                    <img class="no-margin laurel" src="img/Laurel.png" alt="Laurel">
+                </div>
+
+                <div class="contenedor_reloj no-margin">
+                    <h3 class="luxurious-script-regular reloj__titulo">Solo falta</h3>
+                    <div class="time berkshire-swash-drama" id="tiempoReloj">
+                    00:00:00:00
+                    </div>
+                    <img class="pileta" src="img/Pileta.png" alt="Pileta bautismal">
+                </div>
+
+                <script src="js/reloj.js"></script>
+
+                <div id="contenedor_fecha">
+                    <h2 class="luxurious-script-regular no-margin reloj__titulo no-margin">Misa</h2>
+                    <div id="fecha__detalles">
+                        <div class="espacio solo_movil"></div>
+                        <p class="berkshire-swash-drama fecha no-margin">sábado</p>
+                        <p class="berkshire-swash-drama fecha no-margin">7-02-2026</p>
+                        <p class="berkshire-swash-drama fecha no-margin">16:45</p>
+                    </div>
+                    <img class="pileta" src="img/rosario.png" alt="Rosario">
+                    
+                    
+                    <a class="boton boton--primario" href="https://addcal.io/e/ii91odks1z2w/google">Calendarizar</a>
+                </div>
+
+                <div id="contenedor_parientes">
+                    <h2 class="luxurious-script-regular no-margin reloj__titulo no-margin">Madrina</h2>
+                    <p class="berkshire-swash-light no-margin">Lilia Yazmín García Martínez</p>
+                    <h2 class="luxurious-script-regular no-margin reloj__titulo no-margin">Padres</h2>
+                    <p class="berkshire-swash-light no-margin">Cesar Enrique Téllez Martínez</p>
+                    <p class="berkshire-swash-light no-margin">Karina Bazan Martínez</p>
+                    <img class="pileta" src="img/familia.png" alt="Familia bautismal">
+                </div>
+
+                <div class="contenedor_lugar">
+                    <h2 class="luxurious-script-regular no-margin reloj__titulo no-margin">Templo</h2>
+                    <img class="pileta" src="img/parroquia_original.png" alt="Parroquia Ntra. Sra de de Guadalupe">
+                    <h2 class="luxurious-script-regular no-margin lugar__titulo no-margin">Parroquia Ntra. Sra de de Guadalupe</h2>
+                    <p class="berkshire-swash-drama">Av. Dr. Gustavo Baz 48, Benito Juárez, 57000 Ciudad Nezahualcóyotl, México.</p>
+                    <a class="boton boton--primario" href="https://maps.app.goo.gl/sQUUHJGX16ft5sA16?g_st=aw">Ver ubicación</a>
+                </div>
+
+                <div class="contenedor_lugar">
+                    <h2 class="luxurious-script-regular no-margin reloj__titulo no-margin">Salón</h2>
+                    <img class="pileta" src="img/Salon.png" alt="Parroquia Ntra. Sra de de Guadalupe">
+                    <h2 class="luxurious-script-regular no-margin lugar__titulo no-margin">Salon Michel Plus</h2>
+                    <p class="berkshire-swash-drama">C. Pichirilo 53, Benito Juárez, 57000 Cdad. Nezahualcóyotl, Méx.</p>
+                    <a class="boton boton--primario" href="https://maps.app.goo.gl/2xySryhPqU3Qn9a46?g_st=aw">Ver ubicación</a>
+                </div>
+
+                <div class="contenedor_regalos">
+                    <h2 class="luxurious-script-regular no-margin reloj__titulo no-margin">Mesa de regalos</h2>
+                    <p class="berkshire-swash-drama">Tu presencia es nuestro mejor regalo, tu detalle será un tesoro.</p>
+                    <img class="pileta" src="img/Regalo.png" alt="Mesa de regalos">
+                    <a class="boton boton--primario" href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51917054">Agradecemos tu generosidad</a>
+                </div>
+                
+                <div class="contenedor_confirmacion">
+                    <h2 class="luxurious-script-regular no-margin reloj__titulo no-margin">Confirma tu asistencia</h2>
+                    <a class="boton boton--primario" href="https://wa.link/nlmqcr">¡Aquí!</a>
+                    
+                </div>
+
+            </main>
+
+
+        </div>
+
+        <footer class="pie">
+            <div class="pie__logo">
+                <a href="index.html">
+                    <p class="logo logo__nombre">Estilo<span class="logo__bold">Matraz</span></p>
+                </a>
+            </div>
+            
+
+            <div class="navegacion navegacion--pie">
+                <a class="navegacion__enlace" href="https://wa.me/qr/QTI3WPNVLM3QK1">Contacto</a>
+                <a class="navegacion__enlace" href="https://www.facebook.com/profile.php?id=61584798659517">Página</a>
+            </div>
+
+        </footer>
+
+        <script src="js/lazy_load.js"></script>
+    </body>
+</html>

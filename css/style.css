@@ -1,0 +1,583 @@
+:root{
+    --fuenteHeading: "Luxurious Script", cursive;
+    --fuenteSecundaria: "Berkshire Swash", serif;
+    --fuenteParrafos: 'Open Sans' sans-serif;
+
+    --primario: #000000;
+    --gris: #E1E1E1;
+    --blanco: #FFFFFF;
+    --negro: #000000;
+}
+
+.berkshire-swash-drama {
+    font-family: "Berkshire Swash", serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: large;
+    text-align: center;
+}
+
+
+
+.luxurious-script-regular {
+  font-family: "Luxurious Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+@media (min-width: 768px) {
+    .berkshire-swash-drama {
+        font-family: "Berkshire Swash", serif;
+        font-weight: normal;
+        font-style: normal;
+        font-size: xx-large;
+}
+}
+
+.berkshire-swash-light {
+    font-family: "Berkshire Swash", serif;
+    font-weight: lighter;
+    font-style: normal;
+    font-size: x-large;
+    
+}
+
+@media (min-width: 768px) {
+    .berkshire-swash-light {
+    font-family: "Berkshire Swash", serif;
+    font-weight: lighter;
+    font-style: normal;
+    font-size: xx-large;
+    
+    }
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /*1rem = 10px*/
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory; /*Efecto scroll snap*/
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+body {
+    font-family: var(--fuenteParrafos);
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/*
+En los blogs siempre se prefiere un interlineado un poco más grande
+*/
+
+/*Globales*/
+
+.contenedor {
+    max-width: 120rem;
+    width: 90%;
+    /*
+    otra manera de hacerlo:
+    width: min(90%, 120rem);
+    */
+    margin: 0 auto; /*Alinea horizontal*/
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--fuenteHeading);
+    line-height: 1.2; /*Cambia de 2 a 1.2*/
+}
+
+h1 {
+    margin-top: 0rem;
+    font-style: normal;
+    font-size: 10rem;
+}
+
+h2 {
+    
+    text-align: center;
+    font-size: 10rem;
+}
+
+h3 {
+    font-size: 3.2rem;
+}
+
+h4 {
+    font-size: 2.8rem;
+}
+
+
+img {
+    max-width: 100%;
+}
+
+/*Utilidades*/
+
+.espacio {
+    margin: 1rem 1rem 7rem 1rem;
+}
+
+@media (min-width: 768px) {
+    .solo_movil{
+        display: none;
+    }
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.centrar-texto {
+    text-align: center;
+}
+
+/*Inicio Index*/
+/*Header*/
+
+
+header {
+    overflow: hidden;
+    margin-top: 0;
+    margin-bottom: 10rem;
+    padding-top: 10rem;
+    background-image: url("../img/parroquia.png");
+    height: 60rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; /*Siemrpe fluirá al centro, primero horizontal y luego certical*/
+    /*puede cambiarse por left y right, top y bottom*/
+}
+
+@media (min-width: 1080px) {
+    header {
+        background-size: contain;
+    }
+}
+
+.header__texto {
+    color: var(--primario);
+    text-align: center;
+    margin-top: 5rem;
+}
+
+@media (min-width: 768px) {
+    .header__texto {
+        margin-top: 0rem;
+    }
+}
+
+/*Header -> Logo*/
+
+@media (min-width: 768px) {
+    .barra{
+        display: flex;
+        justify-content: space-between;
+        align-items: center; /*Alinear verticalmente*/
+    }
+}
+
+.logo {
+    color: var(--blanco);
+}
+
+.logo__nombre {
+    font-weight: 400;
+}
+
+.logo__bold {
+    font-weight: 700;
+}
+
+
+/*Header -> Navegacion Enlaces*/
+
+@media (min-width: 768px) {
+    .navegacion {
+        display: flex;
+        gap: 2rem;
+        margin-top: 0rem;
+    }
+}
+
+.navegacion__enlace {
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--blanco);
+}
+
+@media (min-width: 768px) {
+    .contenido-principal {
+        display: grid;
+        
+        column-gap: 4rem;
+    }
+}
+
+/*Boton musica*/
+
+#divPlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#playBtn {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background-color: black;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Quitar efectos de pulsado */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+#playBtn::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 2rem solid transparent;
+  border-bottom: 2rem solid transparent;
+  border-left: 4rem solid white; /* triángulo blanco */
+  margin-left: 0.4rem;
+}
+
+#playBtn:active {
+  transform: none;
+  background-color: black;
+}
+
+#playBtn:focus {
+  outline: none;
+}
+
+ /* Animacion*/
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Clase que se aplicará cuando el elemento sea observado */
+.animate-on-view {
+  animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+/* Elementos que animarán deben comenzar invisibles */
+h1, h2, h3, h4, p, #divPlay {
+  opacity: 0;
+}
+
+
+/*Entradas*/
+
+.entrada {
+    border-bottom: 1px solid var(--gris); /*Distintas direcciones: Ancho tipo color*/
+    margin-bottom: 2rem;
+    
+}
+
+
+@media (min-width: 768px) {
+    .entrada:last-of-type { /*Seleccionar el ultimo*/
+        border: none;
+        margin-bottom: 0;
+    }
+}
+
+
+/*Botones*/
+
+.boton {
+    display: block; /*En telefono se espera tome todo el espacio*/
+    font-family: var(--fuenteSecundaria);
+    color: var(--blanco);
+    text-align: center;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 1rem;
+
+}
+
+.boton:hover {
+    cursor: pointer;
+    font-size: 2rem;
+    transition: 300ms;
+}
+
+@media (min-width: 768px) {
+    .boton{
+        display: inline-block; /*DIL no es afectado por margin y width*/
+        /*inline-block sólo toma lo que requiere, hay margin y width pero otro objeto no puede tomar el resto de espacio*/
+    }
+}
+
+.boton--primario {
+    background-color: var(--negro);
+
+}
+
+
+.boton--secundario { /*El -- significa herencia*/
+    background-color: var(--primario);
+
+}
+
+/*Pie*/
+
+.pie{
+    background-color: var(--negro);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*gap: 1rem;*/
+    
+}
+
+@media (min-width: 768px) {
+    .pie {
+        flex-direction: row;
+        gap: 35%;
+    }
+
+}
+
+
+
+.pie__logo {
+    font-size: 2.8rem;
+}
+
+
+.navegacion--pie {
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .pie__logo {
+        margin: 0 auto;
+        justify-content: center;
+        
+    }
+
+    .navegacion--pie {
+        margin: 0 auto;
+        width: auto;
+    }
+}
+
+/* Presentacion*/
+
+.contenedor_nombramiento {
+    min-width: 10rem;
+    margin-top: 30rem;
+    margin-bottom: 30rem;
+margin-top: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    justify-content: center;
+    align-items: center;     /* Aligns items along the cross axis (vertically by default) */
+
+}
+
+@media (min-width: 768px) {
+    .contenedor_nombramiento {
+    margin-top: 40rem;
+    margin-bottom: 40rem;
+    }
+}
+
+.nombramiento__nombre {
+    text-align: center;
+    font-size: 10rem;
+}
+
+@media (min-width: 768px) {
+    .nombramiento__nombre {
+        font-size: 500%;
+    }
+}
+
+@media (min-width: 768px) {
+    .laurel {
+        max-width: 40rem;
+    }
+}
+
+/*Reloj*/
+
+.contenedor_reloj {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15rem;
+margin-top: 15rem;
+}
+
+#tiempoReloj {
+    font-size: 7rem;
+}
+
+@media (min-width: 768px) {
+ #tiempoReloj {
+    font-size: 10rem;
+}   
+}
+
+.reloj__titulo {
+    font-size: 7rem;
+    margin: 2rem 1rem 0rem 1rem;
+}
+
+@media (min-width: 768px) {
+    .reloj__titulo {
+        font-size: 10rem;
+        margin: 2rem 1rem 0rem 1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .pileta {
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 1080px) {
+    .pileta {
+        max-width: 40%;
+    }
+}
+
+/*Fecha */
+#contenedor_fecha {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15rem;
+margin-top: 15rem;
+}
+
+#fecha__detalles {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+@media (min-width: 768px) {
+    #fecha__detalles {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 4rem;
+    } 
+}
+
+.fecha {
+    font-size: 3rem;
+    padding: 0;
+}
+
+@media (min-width: 768px) {
+    .fecha {
+        font-size: 5rem;
+        padding: 0;
+    }
+}
+
+/*Parientes*/
+
+#contenedor_parientes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15rem;
+margin-top: 15rem;
+} 
+
+
+
+
+/*Lugar*/
+
+.contenedor_lugar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15rem;
+margin-top: 15rem;
+}
+
+.lugar__titulo {
+    font-size: 5rem;
+    font-weight: 100;
+}
+
+/*Regalos*/
+
+.contenedor_regalos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15rem;
+margin-top: 15rem;
+}
+
+/*Confirmación */
+
+.contenedor_confirmacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40rem;
+    margin-top: 40rem;
+}
+
+
+/*Scroll */
+
+header, footer, .contenedor_reloj, #contenedor_fecha, #contenedor_parientes, .contenedor_nombramiento, .contenedor_lugar, .contenedor_regalos, .contenedor_confirmacion {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    
+}
